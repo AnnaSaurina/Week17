@@ -42,21 +42,26 @@ class Transport {
         this.brand = brand;
     }
 
-
-    data.getInfo = function() {
+    getInfo = function() {
         return this.type, this.brand
     } 
 
-    data.getPrice = function() {
+    getPrice = function() {
         return this.price
     }
 }
 
 //   создаю класс Car, наследственный от класса Transport 
-class Car {
+class Car extends Transport {
     constructor(type,price,brand,doors) {
+        super (type,price,brand)
         this.doors = doors;
     }
 }
 
-//   создаю класс Bike
+    getDoorsCount = function() {
+        return this.doors;
+    }
+
+//   создаю класс Bike, наследственный от класса Transport 
+
