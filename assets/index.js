@@ -57,11 +57,20 @@ class Car extends Transport {
         super (type,price,brand)
         this.doors = doors;
     }
-}
-
     getDoorsCount = function() {
         return this.doors;
     }
+}
 
 //   создаю класс Bike, наследственный от класса Transport 
+class Bike extends Transport {
+    constructor(type,price,brand,doors,maxSpeed) {
+        super (type,price,brand,doors)
+        this.maxSpeed = maxSpeed;
+    }
+    getMaxSpeed() {
+        return maxSpeed;
+    }
+}
 
+    
