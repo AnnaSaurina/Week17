@@ -42,10 +42,21 @@ class Transport {
         this.brand = brand;
     }
 
-    // getInfo() 
-    // getPrice()
+
+    data.getInfo = function() {
+        return this.type, this.brand
+    } 
+
+    data.getPrice = function() {
+        return this.price
+    }
 }
 
-//   создаю класс Car
+//   создаю класс Car, наследственный от класса Transport 
+class Car {
+    constructor(type,price,brand,doors) {
+        this.doors = doors;
+    }
+}
 
 //   создаю класс Bike
