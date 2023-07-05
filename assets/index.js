@@ -73,4 +73,57 @@ class Bike extends Transport {
     }
 }
 
+// получаю элемент 
+let automobile = document.querySelector('.transport');
+
+// получаю данные из массива
+
+for (let element of data) {
+    if (element.type === 'car') {
+        let car = new Car(element.type, element.price, element.brand, element.doors);
+
+        let elementCar = document.createElement('div');
+        elementCar.innerText = car.getInfo();
+
+        let elementDoors = document.createElement('div');
+        elementDoors.innerText = car.getDoorsCount();
+
+        let elementPrice = document.createElement('div');
+        elementPrice.innerText = car.getPrice();
+
+        let elementImage = document.createElement('image');
+        elementImage.classList.add('car_image');
+        elementImage.src = element.image;
+
+        automobile.appendChild(elementCar);
+        automobile.appendChild(elementDoors);
+        automobile.appendChild(elementPrice);
+        automobile.appendChild(elementImage);
+    }
+
+    else if (element.type === 'bike') {
+        let bike = new Bike(element.type, element.price, element.brand, element.maxSpeed);
+
+        let elementBike = document.createElement('div');
+        elementBike.innerText = bike.getInfo();
+
+        let elementBikePrice = document.createElement('div');
+        elementBikePrice.innerText = bike.getPrice;
+
+        let elementSpeed = document.createElement('div');
+        elementSpeed.innerText = bike.getMaxSpeed();
+
+        let elementBikeImage = document.createElement('image');
+        elementBikeImage.classList.add('bike_image');
+        elementBikeImage.src = elementImage;
+
+        automobile.appendChild(elementBike);
+        automobile.appendChild(elementBikePrice);
+        automobile.appendChild(elementSpeed);
+        automobile.appendChild(elementBikeImage);
+
+    }
+        
+}
+
     
