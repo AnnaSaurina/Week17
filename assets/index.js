@@ -42,11 +42,11 @@ class Transport {
         this.brand = brand;
     }
 
-    getInfo = function() {
+    getInfo() {
         return this.type, this.brand
     } 
 
-    getPrice = function() {
+    getPrice() {
         return this.price
     }
 }
@@ -57,7 +57,7 @@ class Car extends Transport {
         super (type,price,brand)
         this.doors = doors;
     }
-    getDoorsCount = function() {
+    getDoorsCount() {
         return this.doors;
     }
 }
@@ -69,7 +69,7 @@ class Bike extends Transport {
         this.maxSpeed = maxSpeed;
     }
     getMaxSpeed() {
-        return maxSpeed;
+        return this.maxSpeed;
     }
 }
 
@@ -115,7 +115,7 @@ for (let element of data) {
 
         let elementBikeImage = document.createElement('image');
         elementBikeImage.classList.add('bike_image');
-        elementBikeImage.src = elementImage;
+        elementBikeImage.src = element.image;
 
         automobile.appendChild(elementBike);
         automobile.appendChild(elementBikePrice);
