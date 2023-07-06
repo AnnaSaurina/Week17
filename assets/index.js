@@ -83,13 +83,13 @@ for (let element of data) {
         let car = new Car(element.type, element.price, element.brand, element.doors);
 
         let elementCar = document.createElement('div');
-        elementCar.innerText = car.getInfo();
+        elementCar.innerText = `Марка: ${car.getInfo()}`;
 
         let elementDoors = document.createElement('div');
-        elementDoors.innerText = car.getDoorsCount();
+        elementDoors.innerText = `Количество дверей: ${car.getDoorsCount()}`;
 
         let elementPrice = document.createElement('div');
-        elementPrice.innerText = car.getPrice();
+        elementPrice.innerText = `Стоимость: ${car.getPrice()}`;
 
         let elementImage = document.createElement('image');
         elementImage.classList.add('car_image');
@@ -105,13 +105,13 @@ for (let element of data) {
         let bike = new Bike(element.type, element.price, element.brand, element.maxSpeed);
 
         let elementBike = document.createElement('div');
-        elementBike.innerText = bike.getInfo();
+        elementBike.innerText = `Марка: ${bike.getInfo()}`;
 
         let elementBikePrice = document.createElement('div');
-        elementBikePrice.innerText = bike.getPrice;
+        elementBikePrice.innerText = `Стоимость: ${bike.getPrice()}`;
 
         let elementSpeed = document.createElement('div');
-        elementSpeed.innerText = bike.getMaxSpeed();
+        elementSpeed.innerText = `Максимальная скорость: ${bike.getMaxSpeed()}`;
 
         let elementBikeImage = document.createElement('image');
         elementBikeImage.classList.add('bike_image');
