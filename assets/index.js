@@ -112,6 +112,7 @@ for (let element of data) {
 
         let elementSpeed = document.createElement('div');
         elementSpeed.innerText = `Максимальная скорость: ${bike.getMaxSpeed()}`;
+        console.log(elementSpeed);
 
         let elementBikeImage = document.createElement('image');
         elementBikeImage.classList.add('bike_image');
